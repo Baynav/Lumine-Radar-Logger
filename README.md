@@ -1,6 +1,6 @@
-🌙 Lumine Radar Logger
+<p align="center">🌙 Lumine Radar Logger
 Lightweight OCR Event Logger for Lumine Proxy (Minecraft Bedrock)
-<p align="center"> <img src="pixel_cat.ico" width="120" alt="Pixel Cat Logo"> </p> <p align="center"> <b>Session-based radar logging • Spatial dedupe • Low CPU • Standalone EXE</b> </p>
+ <img src="pixel_cat.png" width="120" alt="Pixel Cat Logo"> <b>Session-based radar logging • Spatial dedupe • Low CPU • Standalone EXE</b>
 🚀 Overview
 
 Lumine Radar Logger is a lightweight Windows utility that reads Lumine Proxy radar output directly from your Minecraft Bedrock chat.
@@ -159,7 +159,7 @@ Re-check Minecraft settings
 
 Re-select capture region
 
-Ensure chat is fully visible
+Ensure chat is fully visible </p>
 
 Confirm radar is enabled
 
