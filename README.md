@@ -148,12 +148,6 @@ LumineRadarLogger.exe
 
 ---
 
-# 📜 License
-
-Personal use tool built for Lumine Proxy radar users.
-
----
-
 <p align="center">
   <b>🌙 Created by Baynav with Love &lt;3</b>
 </p>
