@@ -15,8 +15,6 @@
 
 **Lumine Radar Logger** is a lightweight Windows utility that reads Lumine Proxy radar output directly from your **Minecraft Bedrock chat window**.
 
-It creates **clean, filtered session logs** while keeping your main gameplay unaffected.
-
 ---
 
 # ⚠️ IMPORTANT — READ BEFORE USING
