@@ -28,10 +28,6 @@ It works by reading Lumine’s radar output directly from your Minecraft chat wi
 > ❗ **Chat MUST remain open at all times**  
 > ❗ **It will NOT work if chat is closed**
 
-Because Lumine Radar continuously outputs events to chat, running this on your main account while playing is **not recommended**.
-
-> 🔮 A future update may support background logging without chat being open soon.
-
 ---
 
 # ⚙️ Required Minecraft Settings
@@ -151,7 +147,7 @@ LumineRadarLogger.exe
 - CSV export  
 - Event-type filtering  
 - Heatmap generation  
-(Possibly an entire rewrite to move to an entirely different logging system)
+
 ---
 
 # 📜 License
