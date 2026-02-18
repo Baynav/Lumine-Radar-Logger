@@ -6,8 +6,6 @@ import os
 import threading
 import ctypes
 import pytesseract
-import cv2
-import numpy as np
 from mss import mss
 from PIL import Image, ImageDraw
 import tkinter as tk
@@ -86,7 +84,6 @@ def setup_tray(root):
         pystray.MenuItem("Quit", quit_app)
     )
 
-    # Double click restore (Windows reliable method)
     tray_icon.run_detached()
 
 def select_region():
@@ -148,16 +145,11 @@ def load_region():
     return None
 
 
-def preprocess(img):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-    
-    gray = cv2.resize(gray, None, fx=2, fy=2, interpolation=cv2.INTER_NEAREST)
-
-    
-    _, thresh = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY)
-
-    return thresh
+def preprocess(pil):
+    pil = pil.convert("L")
+    pil = pil.resize((pil.width * 2, pil.height * 2), Image.NEAREST)
+    pil = pil.point(lambda p: 255 if p > 180 else 0)
+    return pil
 
 def extract_events(text):
     events = []
@@ -195,7 +187,7 @@ def logger_loop(region, update_status, app_state):
             while app_state["running"]:
 
                 screenshot = sct.grab(region)
-                img = np.array(Image.frombytes("RGB", screenshot.size, screenshot.rgb))
+                img = Image.frombytes("RGB", screenshot.size, screenshot.rgb)
 
                 current_hash = hash(img.tobytes())
 
