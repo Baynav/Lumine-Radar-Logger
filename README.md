@@ -5,7 +5,7 @@
 <h1 align="center">🌙 Lumine Radar Logger</h1>
 
 <p align="center">
-  <b>Lightweight OCR Event Logger for Lumine Proxy (Minecraft Bedrock)</b><br>
+  <b>Lightweight Radar Event Logger for Lumine Proxy (Minecraft Bedrock)</b><br>
   Session-based radar logging • Spatial dedupe • Low CPU • Standalone EXE
 </p>
 
@@ -21,7 +21,7 @@ It creates **clean, filtered session logs** while keeping your main gameplay una
 
 # ⚠️ IMPORTANT — READ BEFORE USING
 
-This logger is designed for an **idling alt account**.
+This logger is designed for an **idling account**.
 
 It works by reading Lumine’s radar output directly from your Minecraft chat window.
 
@@ -30,7 +30,7 @@ It works by reading Lumine’s radar output directly from your Minecraft chat wi
 
 Because Lumine Radar continuously outputs events to chat, running this on your main account while playing is **not recommended**.
 
-> 🔮 A future update may support background logging without chat being open.
+> 🔮 A future update may support background logging without chat being open soon.
 
 ---
 
@@ -70,22 +70,13 @@ These values ensure consistent pixel rendering for accurate OCR coordinate extra
 
 # 🛠 How To Use
 
-1. Create a **secondary Windows user** and log in  
-2. Launch Minecraft through **Lumine Proxy** on your Alt Account  
-3. Join your server  
-4. Ensure `/.radar` is enabled  
-5. Open chat and **KEEP IT OPEN**  
-6. Run **Lumine Radar Logger**  
-7. Select the Chat View Area  
-8. Click **Start**  
-
-### 🔐 Recommended Workflow
-
-- After starting the logger, press **Windows Key + L**
-- Log back into your **main Windows profile**
-- Play normally on your main account
-
-> ✅ This prevents radar chat spam from affecting gameplay.
+1. Start a **Lumine Proxy Server** 
+2. Join the server server  
+3. Ensure `/.radar` is enabled  
+4. Open chat and **KEEP IT OPEN**  
+5. Run **Lumine Radar Logger**  
+6. Select the Chat View Area  
+7. Click **Start**  
 
 ---
 
@@ -160,7 +151,7 @@ LumineRadarLogger.exe
 - CSV export  
 - Event-type filtering  
 - Heatmap generation  
-
+(Possibly an entire rewrite to move to an entirely different logging system)
 ---
 
 # 📜 License
