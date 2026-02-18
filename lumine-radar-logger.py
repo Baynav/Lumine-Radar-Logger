@@ -25,25 +25,24 @@ try:
 except:
     pass
 
+def get_base_path():
+    if getattr(sys, "frozen", False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
 
-def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+BASE_PATH = get_base_path()
 
+tesseract_path = os.path.join(BASE_PATH, "tesseract", "tesseract.exe")
+tessdata_path = os.path.join(BASE_PATH, "tesseract", "tessdata")
+
+pytesseract.pytesseract.tesseract_cmd = tesseract_path
+os.environ["TESSDATA_PREFIX"] = tessdata_path
 
 APP_NAME = "Lumine Radar Logger"
 CONFIG_FILE = "config.json"
 LOG_FILE = "coords_log.txt"
 
-pytesseract.pytesseract.tesseract_cmd = resource_path(
-    os.path.join("tesseract", "tesseract.exe")
-)
-
 tray_icon = None
-
 
 def create_tray_image(color):
     img = Image.new("RGB", (64, 64), (30, 30, 30))
