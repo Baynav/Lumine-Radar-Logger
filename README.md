@@ -133,6 +133,7 @@ The distributed ZIP contains:
 
 ```
 LumineRadarLogger.exe
+README.txt
 ```
 
 > No additional installs required.
